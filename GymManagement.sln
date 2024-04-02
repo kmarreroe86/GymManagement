@@ -21,11 +21,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCommon", "tests\TestCom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymManagement.Domain.UnitTests", "tests\GymManagement.Domain.UnitTests\GymManagement.Domain.UnitTests.csproj", "{49C7F696-4E68-4BEF-B4D1-D9641E8EEC00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Application.UnitTests", "tests\GymManagement.Application.UnitTests\GymManagement.Application.UnitTests.csproj", "{CB205844-F3FD-4E36-8ADF-9003DF3D9C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymManagement.Application.UnitTests", "tests\GymManagement.Application.UnitTests\GymManagement.Application.UnitTests.csproj", "{CB205844-F3FD-4E36-8ADF-9003DF3D9C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Application.SubcutaneousTests", "tests\GymManagement.Application.SubcutaneousTests\GymManagement.Application.SubcutaneousTests.csproj", "{55FC6DB7-6C9F-43A3-83AE-230F9BB2B283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymManagement.Application.SubcutaneousTests", "tests\GymManagement.Application.SubcutaneousTests\GymManagement.Application.SubcutaneousTests.csproj", "{55FC6DB7-6C9F-43A3-83AE-230F9BB2B283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymManagement.Api.IntegrationTests", "tests\GymManagement.Api.IntegrationTests\GymManagement.Api.IntegrationTests.csproj", "{3449EFF0-5E7C-48C4-83E1-45152517B5C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymManagement.Api.IntegrationTests", "tests\GymManagement.Api.IntegrationTests\GymManagement.Api.IntegrationTests.csproj", "{3449EFF0-5E7C-48C4-83E1-45152517B5C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4127CA2B-86A9-4635-9635-C1E9C26B0299}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
