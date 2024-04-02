@@ -32,7 +32,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     
     - name: Build Docker image
-      run: docker build -f GymManagement/Dockerfile -t gymmanagement
+      run: docker build . -t gymmanagement -f GymManagement/Dockerfile
 
     - name: Login to AWS ECR
       uses: aws-actions/configure-aws-credentials@v2
