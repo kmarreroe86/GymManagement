@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Reflection;
 using GymManagement.Application.Common.Interfaces;
 using GymManagement.Domain.Admins;

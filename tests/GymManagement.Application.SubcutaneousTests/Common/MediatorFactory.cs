@@ -1,4 +1,5 @@
 using GymManagement.Api;
+using GymManagement.Application.Common.Interfaces;
 using GymManagement.Infrastructure.Common.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
@@ -22,7 +23,9 @@ public class MediatorFactory : WebApplicationFactory<IAssemblyMarker>, IAsyncLif
         {
             services
                 .RemoveAll<DbContextOptions<GymManagementDbContext>>()
-                .AddDbContext<GymManagementDbContext>((sp, options) => options.UseSqlite(_testDatabase.Connection));
+                .AddDbContext<GymManagementDbContext>((sp, options) => options.UseSqlite(_testDatabase.Connection))
+                .RemoveAll<ICurrentUserProvider>()
+                .AddSingleton<ICurrentUserProvider>(_ => new CurrentUserProviderMock());
         });
     }
 

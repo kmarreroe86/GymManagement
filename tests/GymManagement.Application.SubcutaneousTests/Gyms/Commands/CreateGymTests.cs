@@ -1,7 +1,11 @@
 ﻿using FluentAssertions;
+using GymManagement.Api.Services;
+using GymManagement.Application.Common.Interfaces;
+using GymManagement.Application.Common.Models;
 using GymManagement.Application.SubcutaneousTests.Common;
 using GymManagement.Domain.Subscriptions;
 using MediatR;
+using NSubstitute;
 using TestCommon.Gyms;
 using TestCommon.Subscriptions;
 

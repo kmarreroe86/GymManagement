@@ -6,6 +6,7 @@ using GymManagement.Infrastructure.Admins.Persistence;
 using GymManagement.Infrastructure.Common.Persistence;
 using GymManagement.Infrastructure.Gyms.Persistence;
 using GymManagement.Infrastructure.Subscriptions.Persistence;
+using GymManagement.Infrastructure.Users;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -42,6 +43,7 @@ namespace GymManagement.Infrastructure
             services.AddScoped<IAdminsRepository, AdminsRepository>();
             services.AddScoped<IGymsRepository, GymsRepository>();
             services.AddScoped<ISubscriptionsRepository, SubscriptionsRepository>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<GymManagementDbContext>());
 
             return services;

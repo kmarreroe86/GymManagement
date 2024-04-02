@@ -1,9 +1,4 @@
 ﻿using GymManagement.Application.Gyms.Commands.CreateGym;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestCommon.TestConstants;
 
 namespace TestCommon.Gyms
