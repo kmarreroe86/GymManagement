@@ -9,6 +9,7 @@ namespace GymManagement.Api.IntegrationTests.Controllers;
 
 [Collection(GymManagementApiFactoryCollection.CollectionName)]
 
+// Dummy comment. Remove
 public class CreateSubscriptionTests
 {
     private readonly HttpClient _client;
