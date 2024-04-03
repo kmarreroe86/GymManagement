@@ -24,8 +24,8 @@ jobs:
         INITIAL_VERSION: 1.0.1
         DEFAULT_BUMP: patch
         
-    outputs:
-      new_version: ${{ steps.tab_bump.outputs.new_tag }}
+    ## outputs:
+      ## new_version: ${{ steps.tab_bump.outputs.new_tag }}
       
   build:
     runs-on: ubuntu-latest
