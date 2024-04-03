@@ -31,9 +31,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     
-    - name: Build Docker image
-      run: docker build . -t gymmanagement
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
