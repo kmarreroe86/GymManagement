@@ -10,9 +10,30 @@ on:
     branches: [ "main" ]
 
 jobs:
+  generate-version:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write          
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Github Tag Bump
+        id: tab_bump
+        uses: anothrNick/github-tag-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INITIAL_VERSION: 1.0.2
+          DEFAULT_BUMP: patch
+
+    outputs:
+      new_version: ${{ steps.tab_bump.outputs.new_tag }}
+
   build:
 
     runs-on: ubuntu-latest
+    needs: generate-version
 
     steps:
     - uses: actions/checkout@v4
@@ -49,4 +70,4 @@ jobs:
         IMAGE_TAG: dotnet_gymmanagement_demo
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG:${{ needs.generate-version.outputs.new_version }}
